@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #3498db;
+    --hover-color: #2ecc71;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --button-text-color: #fff;
+    --border-radius: 8px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding-top: 40px;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.plusButton {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plusButton:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1);
+}
+
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.storeList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.storeCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.storeCard:hover {
+    transform: scale(1.05);
+}
+
+.storeCard img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.closeButton:hover {
+    color: #000;
+    background: #f0f0f0;
+}
+
+.addCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+}
+
+.addButton {
+    font-size: 32px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.addButton:hover {
+    transform: scale(1.1);
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 1024px) {
+    .storeList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .storeList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .storeList {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
