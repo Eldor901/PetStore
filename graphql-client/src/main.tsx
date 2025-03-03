@@ -7,7 +7,7 @@ import Modal from "react-modal";
 
 Modal.setAppElement("#root");
 
-const GRAPHQL_SERVER_URI = 'http://localhost:4000/graphql'
+const GRAPHQL_SERVER_URI = "http://localhost:4000/graphql";
 
 const client = new ApolloClient({
   uri: GRAPHQL_SERVER_URI,

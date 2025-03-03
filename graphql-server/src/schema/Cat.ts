@@ -1,6 +1,5 @@
 import { Field, ObjectType, ID } from "type-graphql";
 
-
 @ObjectType()
 export class Cat {
   @Field(() => ID)

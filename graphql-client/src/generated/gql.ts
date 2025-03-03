@@ -1,6 +1,6 @@
 /* eslint-disable */
-import * as types from './graphql';
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
+import * as types from "./graphql";
+import { TypedDocumentNode as DocumentNode } from "@graphql-typed-document-node/core";
 
 /**
  * Map of all GraphQL operations in the project.
@@ -14,10 +14,10 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
 type Documents = {
-    "query GetPetStores {\n  getPetStores {\n    id\n  }\n}": typeof types.GetPetStoresDocument,
+  "query GetPetStores {\n  getPetStores {\n    id\n  }\n}": typeof types.GetPetStoresDocument;
 };
 const documents: Documents = {
-    "query GetPetStores {\n  getPetStores {\n    id\n  }\n}": types.GetPetStoresDocument,
+  "query GetPetStores {\n  getPetStores {\n    id\n  }\n}": types.GetPetStoresDocument,
 };
 
 /**
@@ -37,10 +37,13 @@ export function graphql(source: string): unknown;
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "query GetPetStores {\n  getPetStores {\n    id\n  }\n}"): (typeof documents)["query GetPetStores {\n  getPetStores {\n    id\n  }\n}"];
+export function graphql(
+  source: "query GetPetStores {\n  getPetStores {\n    id\n  }\n}"
+): (typeof documents)["query GetPetStores {\n  getPetStores {\n    id\n  }\n}"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};
 }
 
-export type DocumentType<TDocumentNode extends DocumentNode<any, any>> = TDocumentNode extends DocumentNode<  infer TType,  any>  ? TType  : never;
+export type DocumentType<TDocumentNode extends DocumentNode<any, any>> =
+  TDocumentNode extends DocumentNode<infer TType, any> ? TType : never;

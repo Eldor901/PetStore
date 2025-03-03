@@ -3,7 +3,7 @@ import { ApolloServer } from "apollo-server";
 import { buildSchema } from "type-graphql";
 import { PetStoreResolver } from "./resolvers/PetStoreResolver";
 
-const PORT = 4000
+const PORT = 4000;
 
 async function bootstrap() {
   const schema = await buildSchema({
