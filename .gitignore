@@ -10,6 +10,8 @@ node_modules/
 .env.development
 .env.production
 
+package-lock.json
+
 # Build files
 dist/
 out/
