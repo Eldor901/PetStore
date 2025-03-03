@@ -2,11 +2,11 @@ import React from "react";
 import ReactComponentModal from "react-modal";
 import styles from "./Modal.module.css";
 
-type ModalProps =  {
+type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
-}
+};
 
 const ModalComponent = ({ isOpen, onClose, children }: ModalProps) => {
   return (

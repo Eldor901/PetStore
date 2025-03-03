@@ -42,7 +42,9 @@ const PetStoreForm: React.FC<PetStoreFormProps> = ({ onClose }) => {
         </div>
 
         <div className={styles.buttonGroup}>
-          <button type="submit" className={styles.submitButton}>Submit</button>
+          <button type="submit" className={styles.submitButton}>
+            Submit
+          </button>
           <button type="button" className={styles.cancelButton} onClick={onClose}>
             Cancel
           </button>

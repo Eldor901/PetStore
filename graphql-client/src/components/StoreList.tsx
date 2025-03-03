@@ -31,19 +31,15 @@ const stores = [
 ];
 
 const StoreList = () => {
-
   const handleRemoveClick = (id: string, event: React.MouseEvent) => {
     event.stopPropagation();
     console.log("Remove store:", id);
   };
-  
+
   return (
     <div className={styles.storeList}>
       {stores.map((store) => (
-        <div
-          key={store.id}
-          className={styles.storeCard}
-        >
+        <div key={store.id} className={styles.storeCard}>
           <button className={styles.closeButton} onClick={(e) => handleRemoveClick(store.id, e)}>
             <i className="ri-close-line"></i>
           </button>
@@ -54,7 +50,7 @@ const StoreList = () => {
           </div>
         </div>
       ))}
-      <BlankCard/>
+      <BlankCard />
     </div>
   );
 };
