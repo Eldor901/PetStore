@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/petstores": {
+    "/api/petStore": {
       "get": {
         "summary": "Get all pet stores",
         "operationId": "getAllPetStores",
